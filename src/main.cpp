@@ -18,7 +18,8 @@
 #include "txmempool.h"
 #include "ui_interface.h"
 
-#include <random>
+#include <boost/random/mersenne_twister.hpp>
+#include <boost/random/uniform_int.hpp>
 
 using namespace std;
 using namespace boost;
@@ -993,9 +994,9 @@ int64_t GetProofOfWorkReward(int64_t nFees, int nHeight)
 
 int static generateMTRandom(unsigned int s, int range)
 {
-    std::mt19937 gen(s);
-    std::uniform_int_distribution<> dist(1, range);
-    return dist(gen);
+    boost::mt19937 gen(s);
+    boost::uniform_int<> dist(1, range);
+	return dist(gen);
 }
 // miner's coin stake reward based on coin age spent (coin-days)
 int64_t GetProofOfStakeReward(int64_t nCoinAge, int64_t nFees, int nHeight, uint256 prevHash)
