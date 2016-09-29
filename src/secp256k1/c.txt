@@ -1,0 +1,7 @@
+src/bench_internal.c
+src/bench_recover.c
+src/bench_schnorr_verify.c
+src/bench_sign.c
+src/bench_verify.c
+src/secp256k1.c
+src/tests.c

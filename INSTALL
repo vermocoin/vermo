@@ -1,0 +1,9 @@
+Building Vermo
+
+See doc/readme-qt.rst for instructions on building Vermo QT,
+the intended-for-end-users, nice-graphical-interface, reference
+implementation of Vermo.
+
+See doc/build-*.txt for instructions on building vermod,
+the intended-for-services, no-graphical-interface, reference
+implementation of Vermo.
